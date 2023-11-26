@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!*/
+    .black{
+      width: 650px;
+      height: 950px;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .grid-painting{
+      width: 600px;
+      height: 900px;
+      background-color: rgb(34, 33, 33);
+      display: grid;
+      grid-template: repeat(14, 1fr) / repeat(10, 1fr);
+      gap: 10px;
+    }
+    #one {
+      grid-area: 1 / 1 / 4 / 2;
+      background-color: #F0F1EC;
+    }
+    #two {
+      grid-area: 1 / 2 / 2 / 5;
+      background-color: #F9D01E;
+    }
+    #three {
+      grid-area: 1 / 5 / 2 / 8;
+      background-color: #F0F1EC;
+    }
+    #four {
+      grid-area: 1 / 8 / 2 / 10;
+      background-color: #F0F1EC;
+    }
+    #five {
+      grid-area: 1 / 10 / 3 / -1;
+      background-color: #F0F1EC;
+    }
+    #six {
+      grid-area: 2 / 2 / 4 / 4;
+      background-color: #F0F1EC;
+    }
+    #seven {
+      grid-area: 2 / 6 / 6 / -2;
+      background-color: #E72F24;
+    }
+    #eight {
+      grid-area: 3 / 10 / 6 / -1;
+      background-color: #F0F1EC;
+    }
+    #nine {
+      grid-area: 4 / 1 / 5 / 3;
+      background-color: #F9D01E;
+    }
+    #ten {
+      grid-area: 5 / 1 / 6 / 3;
+      background-color: #F0F1EC;
+    }
+    #eleven {
+      grid-area: 4 / 4 / 6 / 5;
+      background-color: #F0F1EC;
+    }
+    #twelve {
+      grid-area: 2 / 4 / 4 / 6;
+      background-color: black;
+    }
+    #thirteen {
+      grid-area: 4 / 3 / 6 / 4;
+      background-color: black;
+    }
+    #fourteen {
+      grid-area: 4 / 5 / 6 / 6;
+      background-color: #F0F1EC;
+    }
+    #fifteen {
+      grid-area: 6 / 1 / 8 / 3;
+      background-color: #E72F24;
+    }
+    #sixteen{
+      grid-area: 6 / 3 / 8 / 5;
+      background-color: #004592;
+    }
+    #seventeen {
+      grid-area: 6 / 5 / 8 / 6;
+      background-color: #F0F1EC;
+    }
+    #eighteen {
+      grid-area: 6 / 6 / 7 / 8;
+      background-color: #F0F1EC;
+    }
+    #nineteen {
+      grid-area: 7 / 6 / 8 / 8;
+      background-color: #F0F1EC;
+    }
+    #twenty {
+      grid-area: 6 / 8 / 8 / 10;
+      background-color: #F9D01E;
+    }
+    #twentyone {
+      grid-area: 6 / 10 / 8 / -1;
+      background-color: #F9D01E;
+    }
+    #twentytwo {
+      grid-area: 8 / 1 / 10 / 2;
+      background-color: #F9D01E;
+    }
+    #twentythree {
+      grid-area: 8 / 2 / 10 / 4;
+      background-color: #F9D01E;
+    }
+    #twentyfour {
+      grid-area: 8 / 4 / 9 / 6;
+      background-color: #F0F1EC;
+    }
+    #twentyfive {
+      grid-area: 9 / 4 / 10 / 6;
+      background-color: #F0F1EC;
+    }
+    #twentysix {
+      grid-area: 8 / 6 / 10 / 7;
+      background-color: #F0F1EC;
+    }
+    #twentyseven {
+      grid-area: 8 / 7 / 10 / 9;
+      background-color: #E72F24;
+    }
+    #twentyeight {
+      grid-area: 8 / 9 / 10 / -1;
+      background-color: #004592;
+    }
+    #twentynine {
+      grid-area: 10 / 1 / 13 / 2;
+      background-color: #F0F1EC;
+    }
+    #thirty {
+      grid-area: 10 / 2 / 14 / 6;
+      background-color: #004592;
+    }
+    #thirtyone {
+      grid-area: 10 / 6 / 12 / 7;
+      background-color: #F0F1EC;
+    }
+    #thirtytwo {
+      grid-area: 10 / 7 / 12 / 8;
+      background-color: #F0F1EC;
+    }
+    #thirtythree {
+      grid-area: 10 / 8 / 12 / 9;
+      background-color: black;
+    }
+    #thirtyfour {
+      grid-area: 10 / 9 / 12 / 10;
+      background-color: #F9D01E;
+    }
+    #thirtyfive {
+      grid-area: 10 / 10 / 11 / -1;
+      background-color: #F9D01E;
+    }
+    #thirtysix {
+      grid-area: 11 / 10 / 12 / -1;
+      background-color: black;
+    }
+    #thirtyseven {
+      grid-area: 12 / 6 / 14 / 8;
+      background-color: black;
+    }
+    #thirtyeight {
+      grid-area: 12 / 8 / 14 / 10;
+      background-color: #F0F1EC;
+    }
+    #thirtynine {
+      grid-area: 12 / 10 / -1 / -1;
+      background-color: #F0F1EC;
+    }
+    #forty {
+      grid-area: 13 / 1 / -1 / 2;
+      background-color: #F0F1EC;
+    }
+    #fortyone {
+      grid-area: 14 / 2 / -1 / 4;
+      background-color: #F0F1EC;
+    }
+    #fortytwo {
+      grid-area: 14 / 4 / -1 / 7;
+      background-color: #F0F1EC;
+    }
+    #fortythree {
+      grid-area: 14 / 7 / -1 / 10;
+      background-color: #F9D01E;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="black">
+    <div class="grid-painting">
+      <div id="one""></div>
+      <div id="two""></div>
+      <div id="three""></div>
+      <div id="four""></div>
+      <div id="five""></div>
+      <div id="six""></div>
+      <div id="seven""></div>
+      <div id="eight""></div>
+      <div id="nine""></div>
+      <div id="ten""></div>
+      <div id="eleven""></div>
+      <div id="twelve""></div>
+      <div id="thirteen""></div>
+      <div id="fourteen""></div>
+      <div id="fifteen""></div>
+      <div id="sixteen""></div>
+      <div id="seventeen""></div>
+      <div id="eighteen""></div>
+      <div id="nineteen""></div>
+      <div id="twenty""></div>
+      <div id="twentyone""></div>
+      <div id="twentytwo""></div>
+      <div id="twentythree""></div>
+      <div id="twentyfour""></div>
+      <div id="twentyfive""></div>
+      <div id="twentysix""></div>
+      <div id="twentyseven""></div>
+      <div id="twentyeight""></div>
+      <div id="twentynine""></div>
+      <div id="thirty""></div>
+      <div id="thirtyone""></div>
+      <div id="thirtytwo""></div>
+      <div id="thirtythree""></div>
+      <div id="thirtyfour""></div>
+      <div id="thirtyfive""></div>
+      <div id="thirtysix""></div>
+      <div id="thirtyseven""></div>
+      <div id="thirtyeight""></div>
+      <div id="thirtynine""></div>
+      <div id="forty""></div>
+      <div id="fortyone""></div>
+      <div id="fortytwo""></div>
+      <div id="fortythree""></div>
+    </div>
+  </div>
+</body>
+
+</html>
